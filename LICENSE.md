@@ -9,7 +9,7 @@
 ### ⚖️ Conditions d'utilisation
 
 * **Propriété exclusive :** Ce logiciel, son code source, ses interfaces graphiques et ses algorithmes exclusifs de maillage sont la propriété entière et exclusive de leur auteur.
-* **Fork & Usage Privé :** Le "Fork" du dépôt GitHub est autorisé uniquement à des fins d'étude, d'apprentissage et de modification personnelle.
+* **Fork & Usage Privé :** Le "Fork" du dépôt GitHub est ENCOURAGE et autorisé uniquement à des fins d'étude, d'apprentissage et de modification personnelle.
 * **Restrictions :** Toute utilisation, distribution ou exploitation commerciale de ce code (en tout ou en partie) est formellement interdite sans l'autorisation écrite préalable et expresse de l'auteur.
 
 ---
