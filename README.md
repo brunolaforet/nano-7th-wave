@@ -1,17 +1,61 @@
-# 7th Wave 🌊 Surf it!
+# **7th WAVE 🌊 Surf it!**
 
-Le Surf Report de vos spots favoris. Nano App PWA < 100 Ko. SANS pub, SANS cookies, SANS inscription. 100% FREE. 👍
-Consultable en ligne ou à installer.
+**Le Surf Report Mondial intelligent, version ultra-légère.**  
+Nano App < 100 Ko • Zéro Pub • Zéro Cookie • Algorithme de maillage exclusif • Stockage local des favoris
 
----
-
-### ⚡ Caractéristiques
-* **Sobriété absolue :** Une structure minimaliste (conception technique "Bauhaus" inspirée du *Less is more*) axée sur la performance brute.
-* **Algorithme sur mesure :** Système de maillage exclusif calculant la notation et l'impact de la houle selon l'orientation précise des plages.
-* **Indicateurs clés :** Intégration en temps réel des marées et des conditions de surf.
-* **Respect de la vie privée :** Système de favoris géré intégralement en local via le stockage du navigateur (`localStorage`).
+👉 App : https://brunolaforet.github.io/nano-7th-wave
 
 ---
 
-### 📄 Licence & Droits
-Ce projet est soumis à un droit de **Copyright propriétaire**. Les algorithmes de maillage et le code source associé restent la propriété exclusive de leur auteur. Toute reproduction ou utilisation commerciale non autorisée est interdite.
+## **🎯 Domaines d'application**
+
+### 🏄 **1. Surfeurs (Lecture de conditions)**
+* **Maillage de précision :** Grâce à un algorithme de maillage exclusif, l'application analyse l'orientation précise de la plage par rapport à la houle, offrant une lecture plus fine que les reports génériques.
+* **Rapidité d'exécution :** Accès immédiat aux conditions sans chargement de scripts publicitaires ou de trackers.
+
+### 📍 **2. Locaux & Voyageurs (Gestion des Spots)**
+* **Stockage Local :** Enregistrez vos spots favoris directement dans le navigateur. Pas besoin de créer un compte, vos données restent sur votre appareil.
+* **Indépendance :** Une fois le spot configuré, l'interface est ultra-réactive, même avec une connexion mobile dégradée sur le littoral.
+
+### 📐 **3. Performance & Design**
+* **Esthétique Bauhaus :** Une interface pensée sous le principe du "Less is more". L'information est brute, lisible, sans distraction.
+* **Économie de batterie :** Optimisée pour les sessions de surf où l'autonomie du smartphone est précieuse.
+
+---
+
+## **✨ Points Forts**
+
+* **100% FREE & Vie Privée Totale :** ZERO cookie, ZERO tracking, ZERO serveur tiers de collecte de données, ZERO inscription.
+* * **100% LIBRE :** A consulter en ligne sur votre navigateur préféré et/ou installable sur votre smartphone (Android, Iphone) sans passer par les Stores.
+* **Ultra-légère :** Moins de 100 Ko (poids réseau), fidèle à la philosophie des "Nano Apps".
+* **Algorithme Propriétaire :** Système de maillage unique pour l'orientation des plages.
+* **Offline-Friendly :** Gestion des favoris via `localStorage persistant`.
+* **Vibe Coding :** Développement en Vanilla JavaScript/HTML5/CSS3 avec Claude et Gemini. Pas de framework lourd, performance brute.
+
+## **📲 Installation Rapide**
+
+1. Ouvrez https://brunolaforet.github.io/nano-7th-wave sur votre mobile.
+2. **Android (Chrome) :** Menu ⋮ -> Installer l'application.
+3. **iOS (Safari) :** Partager ⎋ -> Sur l'écran d'accueil.
+
+## **🛠️ Stack Technique & Architecture**
+
+Application web statique hébergée sur GitHub Pages :
+* **Core :** HTML5, CSS3, JavaScript (Vanilla).
+* **PWA :** Web App Manifest configuré pour une exécution plein écran native.
+* **Algorithmique :** Logique de maillage (scoring/orientation) développée sur mesure. Pas de dépendances externes, exécution locale optimisée.
+
+## **🔒 Vie Privée & Transparence**
+
+* **Calcul Local :** Toutes les données de favoris et les calculs d'orientation sont effectués localement dans votre navigateur.
+* **Zéro script tiers :** Absence totale de cookies, de trackers ou de scripts publicitaires.
+
+## **⚖️ Licence & Propriété Intellectuelle**
+
+**Copyright (c) 2026 Bruno Henri LAFORÊT. Tous droits réservés.**
+
+* **Propriété exclusive :** Ce logiciel, son code source, ses interfaces graphiques et ses algorithmes exclusifs de maillage sont la propriété entière et exclusive de leur auteur.
+* **Fork & Usage Privé :** Le "Fork" du dépôt GitHub est autorisé uniquement à des fins d'étude, d'apprentissage et de modification personnelle.
+* **Restrictions :** Toute utilisation, distribution ou exploitation commerciale de ce code (en tout ou en partie) est formellement interdite sans l'autorisation écrite préalable et expresse de l'auteur.
+
+_Pour toute demande d'autorisation commerciale, veuillez contacter l'auteur directement via son profil GitHub._
