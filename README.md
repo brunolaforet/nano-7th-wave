@@ -1,6 +1,6 @@
 # **7th WAVE 🌊 Surf it!**
 
-**Le Surf Report Mondial intelligent, version ultra-légère.**  
+**Le Surf Report Mondial intelligent, version ultra-légère.**
 Nano App < 100 Ko • Zéro Pub • Zéro Cookie • Algorithme de maillage exclusif • Stockage local des favoris
 
 👉 App : https://brunolaforet.github.io/nano-7th-wave
@@ -52,7 +52,7 @@ Application web statique hébergée sur GitHub Pages :
 
 ## **🛡️ Authenticité et Traçabilité du Code**
 
-Pour garantir l'intégrité et la paternité de ce projet, chaque mise à jour (commit) est signée numériquement via des **clés SSH utilisant l'algorithme Ed25519 (standard actuel de cryptographie haute performance)**. 
+Pour garantir l'intégrité et la paternité de ce projet, chaque mise à jour (commit) est signée numériquement via des **clés SSH utilisant l'algorithme Ed25519 (standard actuel de cryptographie haute performance)**.
 
 Ce protocole de sécurité certifie que le code provient exclusivement de son auteur original et qu'il n'a fait l'objet d'aucune modification non autorisée. Ce gage de transparence assure aux professionnels et partenaires potentiels une fiabilité totale sur la provenance et l'authenticité de chaque ligne de code développée.
 
@@ -66,3 +66,4 @@ Ce protocole de sécurité certifie que le code provient exclusivement de son au
 * **Restrictions :** Toute utilisation, distribution ou exploitation commerciale de ce code (en tout ou en partie) est formellement interdite sans l'autorisation écrite préalable et expresse de l'auteur.
 
 _Pour toute demande d'autorisation commerciale, veuillez contacter l'auteur directement via son profil GitHub._
+
