@@ -27,7 +27,7 @@ Nano App < 100 Ko • Zéro Pub • Zéro Cookie • Algorithme de maillage excl
 
 * **100% FREE & Vie Privée Totale :** ZERO cookie, ZERO tracking, ZERO serveur tiers de collecte de données, ZERO inscription.
 * **100% LIBRE :** Surf Report consultable en ligne sur votre navigateur préféré et/ou installable sur votre smartphone (Android, Iphone) sans passer par les Stores.
-* **Ultra-légère :** Moins de 100 Ko (poids réseau), fidèle à la philosophie des "Nano Apps".
+* **Ultra-légère :** Moins de 100 Ko (42.0 Ko transférés / 108 Ko ressources), fidèle à la philosophie des "Nano Apps".
 * **Algorithme Propriétaire :** Système de maillage unique pour l'orientation des plages.
 * **Offline-Friendly :** Gestion des favoris via `localStorage persistant`.
 * **Vibe Coding :** Développement en Vanilla JavaScript/HTML5/CSS3 avec Claude et Gemini. Pas de framework lourd, performance brute.
