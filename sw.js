@@ -8,7 +8,7 @@
 //
 // ⚠️ À chaque déploiement qui modifie le HTML/CSS/JS de l'app : incrémenter CACHE_NAME
 // ci-dessous, sinon les visiteurs récurrents restent bloqués sur l'ancienne version en cache.
-const CACHE_NAME = '7thwave-shell-v1';
+const CACHE_NAME = '7thwave-shell-v2'; // v2 : passage à une mise en cache résiliente (voir install)
 
 const APP_SHELL = [
   './',
@@ -23,15 +23,21 @@ const APP_SHELL = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(APP_SHELL))
+      .then((cache) => Promise.all(
+        // Mise en cache fichier par fichier plutôt que cache.addAll() : addAll() est
+        // atomique — un seul 404 (casse de nom incorrecte, fichier renommé/oublié —
+        // GitHub Pages est sensible à la casse) fait rejeter TOUT le lot d'un coup.
+        // Avant, ce rejet court-circuitait le .then(() => self.skipWaiting()) suivant
+        // sans jamais le relancer : le SW s'installait "avec succès" du point de vue du
+        // navigateur, mais restait bloqué en attente indéfiniment — aucune mise à jour
+        // ne prenait jamais la main, et le cache app shell restait vide. Ici, chaque
+        // fichier a son propre filet : un échec isolé est journalisé mais n'empêche ni
+        // la mise en cache des autres fichiers, ni skipWaiting() de s'exécuter.
+        APP_SHELL.map((url) => cache.add(url).catch((err) => {
+          console.warn(`7thWave SW : fichier non mis en cache (${url})`, err);
+        }))
+      ))
       .then(() => self.skipWaiting())
-      .catch((err) => {
-        // cache.addAll() est atomique : un seul fichier en échec (404, casse de nom
-        // incorrecte — GitHub Pages est sensible à la casse) fait échouer tout le lot,
-        // sans qu'aucun fichier ne soit mis en cache. Avant, cet échec était totalement
-        // invisible ; on le journalise au moins, pour pouvoir le diagnostiquer.
-        console.error('7thWave SW : échec de mise en cache de l\'app shell', err);
-      })
   );
 });
 
@@ -56,6 +62,19 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(req).then((cached) => cached || fetch(req))
+    caches.match(req).then((cached) => {
+      if (cached) return cached;
+      return fetch(req).catch(() => {
+        // Hors-ligne (ou réseau qui échoue) et rien en cache : pour une navigation, on
+        // retombe sur l'app shell (index.html) au lieu de laisser le navigateur afficher
+        // sa page d'erreur générique — cohérent avec l'objectif de lancement offline
+        // depuis l'écran d'accueil énoncé en tête de fichier. Pour une sous-ressource
+        // (image, script) sans équivalent offline pertinent, on laisse l'échec remonter
+        // normalement plutôt que de retourner un faux positif.
+        if (req.mode === 'navigate') {
+          return caches.match('./index.html');
+        }
+      });
+    })
   );
 });
