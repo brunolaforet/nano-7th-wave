@@ -8,7 +8,7 @@
 //
 // ⚠️ À chaque déploiement qui modifie le HTML/CSS/JS de l'app : incrémenter CACHE_NAME
 // ci-dessous, sinon les visiteurs récurrents restent bloqués sur l'ancienne version en cache.
-const CACHE_NAME = '7th Wave — V2026.07-4'; // Background fixe dégradé bleu/violet
+const CACHE_NAME = '7th Wave — V2026.07-5'; // AJOUT PARRAINAGE
 
 const APP_SHELL = [
   './',
