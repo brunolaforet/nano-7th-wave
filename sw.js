@@ -8,7 +8,7 @@
 //
 // ⚠️ À chaque déploiement qui modifie le HTML/CSS/JS de l'app : incrémenter CACHE_NAME
 // ci-dessous, sinon les visiteurs récurrents restent bloqués sur l'ancienne version en cache.
-const CACHE_NAME = '7th Wave — V2026.07-5'; // AJOUT PARRAINAGE
+const CACHE_NAME = '7th Wave — V2026.07.5'; // remise photo bg 25.4 Ko seulement
 
 const APP_SHELL = [
   './',
@@ -18,6 +18,7 @@ const APP_SHELL = [
   './icon-192.png',
   './icon-512.png',
   './apple-touch-icon.png',
+  './bg-7thwave.avif',
 ];
 
 self.addEventListener('install', (event) => {
