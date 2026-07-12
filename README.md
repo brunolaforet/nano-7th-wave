@@ -1,7 +1,7 @@
 # **7th WAVE 🌊 Surf it!**
 
 **Le Surf Report Mondial intelligent, version ultra-légère.**
-Nano App < 100 Ko • Zéro Pub • Zéro Cookie • Algorithme de maillage exclusif • Stockage local des favoris
+Nano App < 150 Ko • Zéro Pub • Zéro Cookie • Algorithme de maillage de la houle en 9 points • Stockage local des favoris
 
 👉 App : https://brunolaforet.github.io/nano-7th-wave
 
@@ -10,7 +10,7 @@ Nano App < 100 Ko • Zéro Pub • Zéro Cookie • Algorithme de maillage excl
 ## **🎯 Domaines d'application**
 
 ### 🏄 **1. Surfeurs (Lecture de conditions)**
-* **Maillage de précision :** Grâce à un algorithme de maillage exclusif, l'application analyse l'orientation précise de la plage par rapport à la houle, offrant une lecture plus fine que les reports génériques.
+* **Maillage de précision :** Grâce à un algorithme de maillage en 9 points, l'application interroge 8 points autour de chaque spot pour détecter la direction dominante de la houle sur la journée, une lecture plus robuste qu'un report générique basé sur un point unique.
 * **Rapidité d'exécution :** Accès immédiat aux conditions sans chargement de scripts publicitaires ou de trackers.
 
 ### 📍 **2. Locaux & Voyageurs (Gestion des Spots)**
@@ -27,8 +27,8 @@ Nano App < 100 Ko • Zéro Pub • Zéro Cookie • Algorithme de maillage excl
 
 * **100% FREE & Vie Privée Totale :** ZERO cookie, ZERO tracking, ZERO serveur tiers de collecte de données, ZERO inscription.
 * **100% LIBRE :** Surf Report consultable en ligne sur votre navigateur préféré et/ou installable sur votre smartphone (Android, Iphone) sans passer par les Stores.
-* **Ultra-légère :** Moins de 100 Ko (42.0 Ko transférés / 108 Ko ressources), fidèle à la philosophie des "Nano Apps".
-* **Algorithme Propriétaire :** Système de maillage unique pour l'orientation des plages.
+* **Ultra-légère :** Moins de 150 Ko (72.1 ko transférés / 143 ko ressources), fidèle à la philosophie des "Nano Apps".
+* **Algorithme Propriétaire :** Système de maillage pour détecter la direction dominante de la houle sur la journée.
 * **Offline-Friendly :** Gestion des favoris via `localStorage persistant`.
 * **Vibe Coding :** Développement en Vanilla JavaScript/HTML5/CSS3 avec Claude et Gemini. Pas de framework lourd, performance brute.
 
@@ -43,11 +43,11 @@ Nano App < 100 Ko • Zéro Pub • Zéro Cookie • Algorithme de maillage excl
 Application web statique hébergée sur GitHub Pages :
 * **Core :** HTML5, CSS3, JavaScript (Vanilla).
 * **PWA :** Web App Manifest configuré pour une exécution plein écran native.
-* **Algorithmique :** Logique de maillage (scoring/orientation) développée sur mesure. Pas de dépendances externes, exécution locale optimisée.
+* **Algorithmique :** Logique de maillage (scoring/houle) développée sur mesure. Pas de dépendances serveur en propre, exécution locale optimisée.
 
 ## **🔒 Vie Privée & Transparence**
 
-* **Calcul Local :** Toutes les données de favoris et les calculs d'orientation sont effectués localement dans votre navigateur.
+* **Calcul Local :** Toutes les données de favoris et les calculs sont effectués localement dans votre navigateur.
 * **Zéro script tiers :** Absence totale de cookies, de trackers ou de scripts publicitaires.
 
 ## **🛡️ Authenticité et Traçabilité du Code**
@@ -66,4 +66,3 @@ Ce protocole de sécurité certifie que le code provient exclusivement de son au
 * **Restrictions :** Toute utilisation, distribution ou exploitation commerciale de ce code (en tout ou en partie) est formellement interdite sans l'autorisation écrite préalable et expresse de l'auteur.
 
 _Pour toute demande d'autorisation commerciale, veuillez contacter l'auteur directement via son profil GitHub._
-
