@@ -8,7 +8,7 @@
 //
 // ⚠️ À chaque déploiement qui modifie le HTML/CSS/JS de l'app : incrémenter CACHE_NAME
 // ci-dessous, sinon les visiteurs récurrents restent bloqués sur l'ancienne version en cache.
-const CACHE_NAME = '7th Wave — V2026.07.6'; // Mentions légales musclées
+const CACHE_NAME = '7th Wave — V2026.07-8'; // Mentions légales musclées + rgpd + parrainage
 
 const APP_SHELL = [
   './',
