@@ -1,6 +1,6 @@
 # **7th WAVE 🌊 Surf it!**
 
-**Le Surf Report Mondial intelligent, version ultra-légère.**
+**Le Surf Report Mondial, version ultra-légère.**
 nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro Tracker • Zéro inscription • 100% FREE 🤙 Consultable en ligne ou à installer • Algorithme de maillage de la houle en 9 points • Stockage local des favoris
 
 👉 App : https://brunolaforet.github.io/nano-7th-wave
