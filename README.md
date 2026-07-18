@@ -59,7 +59,7 @@ Ce protocole de sécurité certifie que le code provient exclusivement de son au
 
 **Copyright (c) 2026 Bruno Henri LAFORÊT. Tous droits réservés.**
 
-* **Propriété exclusive :** Ce logiciel, son code source, ses interfaces graphiques et ses algorithmes exclusifs de maillage sont la propriété entière et exclusive de leur auteur.
+* **Propriété exclusive :** Ce logiciel, son code source, ses interfaces graphiques et ses algorithmes sont la propriété entière et exclusive de leur auteur.
 * **Fork & Usage Privé :** Le "Fork" du dépôt GitHub est ENCOURAGÉ et autorisé uniquement à des fins d'étude, d'apprentissage et de modification personnelle.
 * **Restrictions :** Toute utilisation, distribution ou exploitation commerciale de ce code (en tout ou en partie) est formellement interdite sans l'autorisation écrite préalable et expresse de l'auteur.
 
