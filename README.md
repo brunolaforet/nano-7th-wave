@@ -1,7 +1,7 @@
 # **7th WAVE 🌊 Surf it!**
 
 **Le Surf Report Mondial, version ultra-légère.**
-nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro Tracker • Zéro inscription • 100% FREE 🤙 Consultable en ligne ou à installer • Stockage local des favoris
+nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro Tracker • Zéro inscription • 100% FREE 🤙 Consultable en ligne ou à installer • Stockage local des favoris • Une exécution en quelques millisecondes
 
 👉 App : https://brunolaforet.github.io/nano-7th-wave
 
@@ -28,6 +28,7 @@ nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro 
 * **100% LIBRE :** Surf Report consultable en ligne sur votre navigateur préféré et/ou installable sur votre smartphone (Android, Iphone) sans passer par les Stores.
 * **Ultra-légère :** Moins de 150 Ko (70.7 ko transférés / 141 ko ressources), fidèle à la philosophie des "nano Apps".
 * **Offline-Friendly :** Gestion des favoris via `localStorage persistant`.
+* **Stratégie Search optimisée :** En raison des conditions "Fair use" d'Open meteo/Marine et Nominatim/OSM.
 * **Vibe Coding :** Développement en Vanilla JavaScript/HTML5/CSS3 avec Claude et Gemini. Pas de framework lourd, performance brute.
 
 ## **📲 Installation Rapide**
