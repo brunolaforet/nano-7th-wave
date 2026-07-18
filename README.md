@@ -1,7 +1,7 @@
 # **7th WAVE 🌊 Surf it!**
 
 **Le Surf Report Mondial, version ultra-légère.**
-nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro Tracker • Zéro inscription • 100% FREE 🤙 Consultable en ligne ou à installer • Algorithme de maillage de la houle en 9 points • Stockage local des favoris
+nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro Tracker • Zéro inscription • 100% FREE 🤙 Consultable en ligne ou à installer • Stockage local des favoris
 
 👉 App : https://brunolaforet.github.io/nano-7th-wave
 
@@ -10,7 +10,6 @@ nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro 
 ## **🎯 Domaines d'application**
 
 ### 🏄 **1. Surfeurs (Lecture de conditions)**
-* **Maillage de précision :** Grâce à un algorithme de maillage en 9 points, l'application interroge 8 points autour de chaque spot pour détecter la direction dominante de la houle sur la journée, une lecture plus robuste qu'un report générique basé sur un point unique.
 * **Rapidité d'exécution :** Accès immédiat aux conditions sans chargement de scripts publicitaires régie ou de trackers.
 
 ### 📍 **2. Locaux & Voyageurs (Gestion des Spots)**
@@ -27,8 +26,7 @@ nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro 
 
 * **100% FREE & Vie Privée Totale :** ZERO cookie, ZERO tracking, ZERO serveur tiers de collecte de données, ZERO inscription.
 * **100% LIBRE :** Surf Report consultable en ligne sur votre navigateur préféré et/ou installable sur votre smartphone (Android, Iphone) sans passer par les Stores.
-* **Ultra-légère :** Moins de 150 Ko (72.1 ko transférés / 143 ko ressources), fidèle à la philosophie des "nano Apps".
-* **Algorithme Propriétaire :** Système de maillage pour détecter la direction dominante de la houle sur la journée.
+* **Ultra-légère :** Moins de 150 Ko (70.7 ko transférés / 141 ko ressources), fidèle à la philosophie des "nano Apps".
 * **Offline-Friendly :** Gestion des favoris via `localStorage persistant`.
 * **Vibe Coding :** Développement en Vanilla JavaScript/HTML5/CSS3 avec Claude et Gemini. Pas de framework lourd, performance brute.
 
@@ -43,7 +41,7 @@ nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro 
 Application web statique hébergée sur GitHub Pages :
 * **Core :** HTML5, CSS3, JavaScript (Vanilla).
 * **PWA :** Web App Manifest configuré pour une exécution plein écran native.
-* **Algorithmique :** Logique de maillage (scoring/houle) développée sur mesure. Pas de dépendances serveur en propre, exécution locale optimisée.
+* **Algorithmique :** Pas de dépendances serveur en propre, exécution locale optimisée.
 
 ## **🔒 Vie Privée & Transparence**
 
