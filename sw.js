@@ -9,7 +9,7 @@
 // ⚠️ À chaque déploiement qui modifie le HTML/CSS/JS de l'app : incrémenter CACHE_NAME
 // ci-dessous, sinon les visiteurs récurrents restent bloqués sur l'ancienne version en cache.
 // Dernier changelog : chgt meta title SERP pixel, mentions légales musclées + RGPD + parrainage.
-const CACHE_NAME = '7th Wave — Audit global ok V2026.07-21 / Vue carte OSM';
+const CACHE_NAME = 'FINAL CUT DIRECTOR';
 
 const APP_SHELL = [
   './',
