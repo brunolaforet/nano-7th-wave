@@ -10,7 +10,9 @@ nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro 
 ## **🎯 Domaines d'application**
 
 ### 🏄 **1. Surfeurs (Lecture de conditions)**
-* **Rapidité d'exécution :** Accès immédiat aux conditions sans chargement de scripts publicitaires régie ou de trackers.
+* **Rapidité d'exécution :** Réseau dégradé au bord de l'eau : quand on est sur le parking du spot avec 1 barre de 3G/Edge et du vent, charger 2.5 Mo de scripts, de trackers et de pubs prend 15 à 30 secondes (quand ça ne plante pas).
+
+7th Wave, c'est un accès immédiat aux conditions, avec un poids de 74.8 Ko réseau qui passe en quelques millisecondes. C'est la seule métrique qui compte pour l'impact réseau et la sobriété numérique. En cas de coupure web, ton dernier surf report consulté est préservé grâce au cache persistant.
 
 ### 📍 **2. Locaux & Voyageurs (Gestion des Spots)**
 * **Stockage Local :** Enregistrez vos spots favoris directement dans le navigateur. Pas besoin de créer un compte, vos données restent sur votre appareil.
@@ -26,9 +28,9 @@ nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro 
 
 * **100% FREE & Vie Privée Totale :** ZERO cookie, ZERO tracking, ZERO serveur tiers de collecte de données, ZERO inscription.
 * **100% LIBRE :** Surf Report consultable en ligne sur votre navigateur préféré et/ou installable sur votre smartphone (Android, Iphone) sans passer par les Stores.
-* **Ultra-légère :** Moins de 150 Ko (70.7 ko transférés / 141 ko ressources), fidèle à la philosophie des "nano Apps".
+* **Ultra-légère :** Moins de 150 Ko (74.8 ko transférés / 148 ko ressources), fidèle à la philosophie des "nano Apps".
 * **Offline-Friendly :** Gestion des favoris via `localStorage persistant`.
-* **Stratégie Search optimisée :** Respect des conditions "Fair use" d'Open meteo/Marine et Nominatim/OSM.
+* **Stratégie Search optimisée :** En raison des conditions "Fair use" d'Open meteo/Marine et Nominatim/OSM.
 * **Vibe Coding :** Développement en Vanilla JavaScript/HTML5/CSS3 avec Claude et Gemini. Pas de framework lourd, performance brute.
 
 ## **📲 Installation Rapide**
@@ -43,6 +45,7 @@ Application web statique hébergée sur GitHub Pages :
 * **Core :** HTML5, CSS3, JavaScript (Vanilla).
 * **PWA :** Web App Manifest configuré pour une exécution plein écran native.
 * **Algorithmique :** Pas de dépendances serveur en propre, exécution locale optimisée.
+* **Bonnes Pratiques :** Scoring PageSpeed Insights de Google > au 22.07/26 :Splash Page : 100 PABS. SurfReport : 100 PBS 92 A. Global 2/2 Nav Agentique.
 
 ## **🔒 Vie Privée & Transparence**
 
