@@ -1,21 +1,25 @@
 [
   {
     "active": true,
-    "text": "🌞 Bel été !! 🏖️🏄🏼‍♀️"
-  },
-{
-    "active": true,
-    "text": "Un Spot de la Façade Atlantique 🇫🇷 que même les mouettes gardent secret ? 🤫 Partage ton Spot secret 🩵 !"
-  },
-{
-    "active": true,
-    "text": "🌍 Vue carte avec Open Street Map"
+    "text": "Cas concrets de conditions Surf ? 🧭 KÉZAKO"
   },
   {
     "active": true,
-    "text": "Adopte Un Spot ! ❤️ : Andréa T. Marraine du spot Lacanau Océan"
+    "text": "🌞 Bel été ! 🏖️🏄🏼‍♀️"
   },
- {
+  {
+    "active": true,
+    "text": "Un spot secret sur la façade Atlantique ? 🤫 Partage-le ! 🩵"
+  },
+  {
+    "active": true,
+    "text": "🌍 Vue carte avec OpenStreetMap"
+  },
+  {
+    "active": true,
+    "text": "Adopte un spot ! ❤️ : Andréa T. marraine du spot Lacanau Océan"
+  },
+  {
     "active": true,
     "text": "Le Surf Report bug ? 🔍 Signaler un écart"
   }
