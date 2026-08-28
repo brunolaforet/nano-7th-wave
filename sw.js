@@ -12,7 +12,7 @@
 // GitHub Action) tenté puis abandonné le 16/08/2026 — retour à l'architecture mono-fichier
 // d'origine. Seul le fix de navigation JS sur le carousel Chouchous (plus de rechargement de
 // page au clic) a été conservé, dans index.html.
-const CACHE_NAME = '🤙';
+const CACHE_NAME = '🐸';
 
 const APP_SHELL = [
   './',
