@@ -1,3 +1,6 @@
+
+![7th Wave](./PoC.jpg)
+
 # **7th WAVE 🌊 Surf it!**
 
 **Le Surf Report Mondial, version ultra-légère.**
