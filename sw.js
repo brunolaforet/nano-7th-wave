@@ -15,7 +15,7 @@
 // GitHub Action) tenté puis abandonné le 16/08/2026 — retour à l'architecture mono-fichier
 // d'origine. Seul le fix de navigation JS sur le carousel Chouchous (plus de rechargement de
 // page au clic) a été conservé, dans index.html.
-const CACHE_NAME = '7w-respect-0923';
+const CACHE_NAME = 'SWIPE';
 
 const APP_SHELL = [
   './',
