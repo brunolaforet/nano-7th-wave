@@ -1,5 +1,5 @@
 
-![7th Wave](./PoC.jpg)
+![7th Wave](./takeiteasy.webp)
 
 # **7th WAVE 🌊 Surf it!**
 
