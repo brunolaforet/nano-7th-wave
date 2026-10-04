@@ -10,6 +10,13 @@ nano App ultra légère <150 Ko • Zéro pub régie • Zéro cookie • Zéro 
 
 ---
 
+> [!NOTE]
+> **Évolution de l'affichage des conditions**
+> L'interface intègre désormais un **dashboard visuel sous forme de pastilles**.
+> Pour consulter la version littérale classique du verdict et le code précédent, l'ensemble reste accessible dans l'**historique des commits** du dépôt.
+
+---
+
 ## **🎯 Domaines d'application**
 
 ### 🏄 **1. Surfeurs (Lecture de conditions)**
