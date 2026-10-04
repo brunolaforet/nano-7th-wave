@@ -2,7 +2,7 @@
   "name": "7th Wave",
   "short_name": "7th Wave",
   "description": "7th Wave, le Surf Report de tes Spots favoris. nano App <100 Ko. SANS pub, SANS cookies, SANS inscription. 100% FREE 🤙",
-  "id": "/nano-7th-wave/index.html",
+  "id": "/nano-7th-wave/",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
