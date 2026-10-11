@@ -1,5 +1,12 @@
 {
   "Les Cavaliers": { "color": "🌶️", "user": "Bruno L.", "style": 2 },
   "Jaws - Point Break ;) - Haiku-Pauwela - Hawaï": { "color": "🩵", "user": "Andréa T.", "style": 3 },
-  "Lacanau Océan": { "color": "🌊", "user": "Andréa T.", "style": 2 }
+  "Lacanau Océan": { "color": "🌊", "user": "Andréa T.", "style": 2 },
+  "_webcams": {
+    "key": "c6KD0nPgIhadR5GMJMwlfqdW7NAjZn0V",
+    "spots": {
+      "La Côte des Basques": 1649358421,
+      "Côte des Basques": 1649358421
+    }
+  }
 }

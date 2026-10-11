@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test webcam Windy — diagnostic</title>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; max-width: 640px; margin: 24px auto; padding: 0 16px; color: #1a2a3a; }
+  h1 { font-size: 18px; }
+  .step { margin: 10px 0; padding: 10px 12px; border-radius: 8px; background: #f0f8ff; }
+  .ok { border-left: 4px solid #2e9e5b; }
+  .ko { border-left: 4px solid #c0392b; background: #fdf0ee; }
+  .warn { border-left: 4px solid #e08a00; background: #fff6e5; }
+  code { background: #fff; padding: 1px 4px; border-radius: 4px; word-break: break-all; }
+  img { max-width: 400px; width: 100%; border-radius: 8px; display: block; margin-top: 8px; }
+</style>
+</head>
+<body>
+<h1>Diagnostic snapshot webcam (Côte des Basques)</h1>
+<p>À ouvrir via <code>http://localhost:8000/test-webcam.html</code> (même dossier que <code>registry.json</code>).</p>
+<div id="out"></div>
+<script>
+const out = document.getElementById('out');
+function line(cls, html) {
+  const d = document.createElement('div');
+  d.className = 'step ' + cls;
+  d.innerHTML = html;
+  out.appendChild(d);
+}
+
+(async () => {
+  // 0. Contexte
+  line(location.protocol === 'file:' ? 'ko' : 'ok',
+    location.protocol === 'file:'
+      ? '❌ Page ouverte en <code>file://</code> : le navigateur bloque la lecture de registry.json. Lance un serveur local (<code>python3 -m http.server 8000</code>) et ouvre <code>http://localhost:8000/test-webcam.html</code>.'
+      : '✅ Page servie en <code>' + location.origin + '</code>');
+
+  // 1. Service worker(s) déjà enregistrés sur cette origine
+  try {
+    const regs = await navigator.serviceWorker.getRegistrations();
+    line(regs.length ? 'warn' : 'ok', regs.length
+      ? '⚠️ ' + regs.length + ' service worker(s) enregistré(s) sur cette origine : ils peuvent servir une ANCIENNE version de index.html. DevTools → Application → Service Workers → « Unregister », puis rechargement forcé (Ctrl+Maj+R).'
+      : '✅ Aucun service worker enregistré sur cette origine.');
+  } catch (e) {
+    line('warn', '⚠️ Service workers non vérifiables : ' + e.message);
+  }
+
+  // 2. registry.json
+  let reg = null;
+  try {
+    const r = await fetch('./registry.json', { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    reg = await r.json();
+    line('ok', '✅ registry.json chargé (' + Object.keys(reg).length + ' entrées).');
+  } catch (e) {
+    line('ko', '❌ registry.json illisible : <code>' + e.message + '</code> (fichier absent du dossier, mal nommé, ou page en file://).');
+    return;
+  }
+
+  const w = reg._webcams;
+  if (!w || !w.key || !w.spots) {
+    line('ko', '❌ Pas d\'entrée <code>_webcams</code> avec <code>key</code> et <code>spots</code> dans ce registry.json (ancienne version ?).');
+    return;
+  }
+  const names = Object.keys(w.spots);
+  line('ok', '✅ <code>_webcams</code> présent. Spots : ' + names.map(n => '<code>' + n + '</code>').join(', '));
+
+  // 3. Appel Windy
+  const id = w.spots['La Côte des Basques'] || w.spots['Côte des Basques'];
+  if (!id) { line('ko', '❌ Aucun ID pour « La Côte des Basques » / « Côte des Basques ».'); return; }
+  const url = 'https://api.windy.com/webcams/api/v3/webcams/' + id + '?include=images,urls';
+  try {
+    const res = await fetch(url, { headers: { 'x-windy-api-key': w.key } });
+    if (!res.ok) {
+      let body = ''; try { body = (await res.text()).slice(0, 300); } catch (_) {}
+      line('ko', '❌ Windy a répondu <code>HTTP ' + res.status + '</code>. ' +
+        (res.status === 401 || res.status === 403 ? 'Clé refusée : pas encore active (quelques minutes après création), erreur de copie, ou restriction de domaine (localhost refusé ?).' : '') +
+        '<br>Réponse : <code>' + body.replace(/</g, '&lt;') + '</code>');
+      return;
+    }
+    const d = await res.json();
+    const cur = d.images && d.images.current;
+    line('ok', '✅ Windy a répondu (HTTP 200). Champs reçus : <code>' + Object.keys(d).join(', ') + '</code>');
+    if (!cur) { line('ko', '❌ Pas de <code>images.current</code> dans la réponse. Colle-moi la réponse (sans la clé).'); return; }
+    line('ok', '✅ <code>images.current</code> : <code>' + Object.keys(cur).join(', ') + '</code>' +
+      '<br>Lien page : <code>' + ((d.urls && d.urls.detail) || '—') + '</code>');
+    const src = cur.preview || cur.thumbnail;
+    const img = new Image();
+    img.onload = () => line('ok', '✅ Image chargée : ' + img.naturalWidth + ' × ' + img.naturalHeight + ' px (la mise en page de l\'app part sur 400 × 224).<br>');
+    img.onerror = () => line('ko', '❌ L\'URL de l\'image ne se charge pas (jeton expiré ou bloqué).');
+    img.referrerPolicy = 'origin';
+    img.src = src;
+    out.appendChild(img);
+  } catch (e) {
+    line('ko', '❌ L\'appel à Windy n\'a pas abouti : <code>' + e.name + ' — ' + e.message + '</code>.<br>' +
+      '« Failed to fetch » = blocage CORS (Windy n\'autorise pas cette origine ou l\'en-tête) ou réseau/bloqueur de pub. Teste sans extension de navigateur (fenêtre privée), puis donne-moi ce message.');
+  }
+})();
+</script>
+</body>
+</html>
