@@ -8,14 +8,16 @@
 //
 // ⚠️ À chaque déploiement qui modifie le HTML/CSS/JS de l'app : incrémenter CACHE_NAME
 // ci-dessous, sinon les visiteurs récurrents restent bloqués sur l'ancienne version en cache.
-// Dernier changelog (23/09/2026) : mise en conformité fair use Open-Meteo / OSM (attribution CC BY 4.0,
+// Changelog (20/10/2026) : cartouche camouflage (camo.svg ajouté à l'app shell) ; correctifs du refresh des
+// favoris et timeout des requêtes dans index.html. Aucun changement de stratégie du service worker.
+// Changelog (23/09/2026) : mise en conformité fair use Open-Meteo / OSM (attribution CC BY 4.0,
 // mentions légales, interrupteur Nominatim via registry.json, espacement des requêtes Nominatim) ;
 // manifest.json aligné sur --primary #3743ba. Aucun changement de stratégie du service worker.
 // Changelog précédent : chantier de pré-rendu SEO (report-engine.js, prerender-chouchous.js,
 // GitHub Action) tenté puis abandonné le 16/08/2026 — retour à l'architecture mono-fichier
 // d'origine. Seul le fix de navigation JS sur le carousel Chouchous (plus de rechargement de
 // page au clic) a été conservé, dans index.html.
-const CACHE_NAME = 'FAV';
+const CACHE_NAME = 'CAMO';
 
 const APP_SHELL = [
   './',
@@ -26,6 +28,7 @@ const APP_SHELL = [
   './icon-512.png',
   './apple-touch-icon.png',
   './bg-7thwave.avif',
+  './camo.svg', // motif du cartouche (cache-first : remplacer le fichier ⇒ changer CACHE_NAME)
 ];
 
 self.addEventListener('install', (event) => {
